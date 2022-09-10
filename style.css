@@ -1,0 +1,56 @@
+.Card{
+    box-sizing: content-box; 
+    width: 400px; margin: 0 auto; 
+    height: 700px; 
+    background-color:white; 
+    border:10px solid white; 
+    border-radius:20px;
+}
+.head{
+    box-sizing: content-box; 
+    width: 100%;
+}
+.title{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%; 
+    font-size:24px; 
+    font-weight:bold; 
+    text-align: center; 
+    position: relative;
+}
+.QR{
+    font-weight:bold; 
+    font-size: 24px; 
+    margin-bottom: 15px; 
+    margin-left: 10px; 
+    margin-top: 10px;
+}
+.scansub{
+    margin: 0 auto; 
+    text-align:center; 
+    margin-top:60px;
+    font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+}
+.scansubsub{
+    margin: 0 auto; 
+    text-align:center; 
+    margin-top: 8px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    color:grey;
+}
+img{
+    width:200px;
+    height: 200px;
+    margin-left: 100px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    border:3px solid orange;
+    border-radius: 15px;
+    padding: 5px;
+}

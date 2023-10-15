@@ -1,17 +1,19 @@
 .Card{
     box-sizing: content-box; 
-    width: 400px; margin: 0 auto; 
-    height: 700px; 
+    width: 350px; margin: 0 auto; 
+    height: 1000px; 
     background-color:white; 
     border:10px solid white; 
     border-radius:20px;
+    text-align: center;
+    flex: content;
 }
 .head{
     box-sizing: content-box; 
     width: 100%;
+    text-align: center;
 }
 .title{
-    margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%; 
@@ -19,6 +21,7 @@
     font-weight:bold; 
     text-align: center; 
     position: relative;
+    flex: content;
 }
 .QR{
     font-weight:bold; 
@@ -26,6 +29,7 @@
     margin-bottom: 15px; 
     margin-left: 10px; 
     margin-top: 10px;
+    text-align: center;
 }
 .scansub{
     margin: 0 auto; 
@@ -54,3 +58,54 @@ img{
     border-radius: 15px;
     padding: 5px;
 }
+.price{
+    font-weight:lighter; 
+    font-size: 24px; 
+    margin-right: 10px; 
+}
+.line{
+    display: inline-block;
+}
+.button{
+    background-color: white;
+    width: 30%;
+    height: 40px;
+    border: none;
+    margin-left: 13px;
+    
+}
+.buttonn{
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border: none;
+    margin-left: 13px;
+    
+}
+.Cardd{
+    box-sizing: content-box; 
+    align-items: center;
+    width: 300px; margin: 0 auto; 
+    height: 350px; 
+    background-color:white; 
+    border:10px solid white; 
+    border-radius:20px;
+}
+.button:hover{
+    color: salmon;
+    width: 30%;
+    height: 40px;
+    border: none;
+    margin-left: 13px;
+    
+}
+
+.buttonn:hover{
+    color: salmon;
+    width: 100px;
+    height: 40px;
+    border: none;
+    margin-left: 13px;
+    
+}
+

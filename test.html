@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<style>
+</style>
+<html lang="en">
+    <head>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCA PAY</title>
+    </head>
+
+<body style="background-color:orange;">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script >
+        // Import the functions you need from the SDKs you need
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCAT7bkhzoDUEMN7RaYUx9ZyRJyhs4yP0Q",
+            authDomain: "project1-6dfc7.firebaseapp.com",
+            databaseURL: "https://project1-6dfc7-default-rtdb.firebaseio.com",
+            projectId: "project1-6dfc7",
+            storageBucket: "project1-6dfc7.appspot.com",
+            messagingSenderId: "1086482242380",
+            appId: "1:1086482242380:web:7ef4b2d6b3c2a886fc8de9",
+            measurementId: "G-FQY04VY3MQ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+    <header>
+        <div class="head"> 
+            <h1 class="title">
+            MCA PAY
+            </h1> 
+        </div>
+    </header>
+
+    <div class="Cardd">
+        <h3 class="QR">
+            카드 번호를 입력해주세요.
+        </h3>
+        <div style="display: inline-block">
+            <h5>&nbsp&nbsp&nbsp카드 번호&nbsp&nbsp&nbsp</h5>
+        </div>
+        <div style="display: inline-block">
+            <input type="text" name="CardNumber" placeholder="카드 번호 16자리" id="cardnumber">
+        </div>
+        <div style="display: inline-block">
+            <h5>&nbsp&nbsp&nbsp유효 기간&nbsp&nbsp&nbsp</h5>
+        </div>
+        <div style="display: inline-block">
+            <input type="text" name="CardDate" placeholder="예시) 04/25" id="carddate">
+        </div>
+        <div style="display: inline-block">
+            <h5>&nbsp&nbsp&nbspCVC&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h5>
+        </div>
+        <div style="display: inline-block">
+            <input type="text" name="CardCVC" placeholder="카드 서명란 끝 3자리 숫자" id="cardcvc">
+
+        </div>
+        <div style="display: inline-block">
+            <h5>&nbsp&nbsp&nbsp비밀번호&nbsp&nbsp&nbsp&nbsp</h5>
+        </div>
+        <div style="display: inline-block">
+            <input type="text" name="CardPwd" placeholder="카드 비밀번호 4자리" id="cardpwd">
+        </div>
+        <input class="button" type="button" value="결제하기" onclick="payProcess();"></input>
+
+        </div>
+        <script>
+            function payProcess(){
+                var CardNumber = document.getElementById("cardnumber");
+                var CardDate = document.getElementById("carddate");
+                var CardCVC = document.getElementById("cardcvc");
+                var CardPwd = document.getElementById("cardpwd");
+                if(CardNumber.value == ""){
+                    alert("카드 번호를 입력해주세요");
+                    return false;
+                }
+                if(CardDate.value == ""){
+                    alert("유효 기간을 입력해주세요");
+                    return false;
+                }
+                if(CardCVC.value == ""){
+                    alert("CVC 번호를 입력해주세요");
+                    return false;
+                }
+                if(CardPwd.value == ""){
+                    alert("비밀번호를 입력해주세요");
+                    return false;
+                }
+                if(CardNumber.value=="1365" && CardDate.value=="06" && CardCVC.value=="365" && CardPwd.value=="1111")
+                {
+                    alert("결제 되었습니다");
+                    payment();
+    
+                }
+                
+                else{
+                    alert("정보를 다시 확인해주세요.")
+                }
+                
+            }
+        </script>
+        <script>
+            function payment(){
+                        var data="1";
+                        firebase.database().ref('vible').set({vible:data});
+                    }
+        </script>
+</body>
+</html>

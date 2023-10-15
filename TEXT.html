@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="Ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCA PAY_BILL</title>
+</head>
+<body style="background-color:orange;">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script >
+        // Import the functions you need from the SDKs you need
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCAT7bkhzoDUEMN7RaYUx9ZyRJyhs4yP0Q",
+            authDomain: "project1-6dfc7.firebaseapp.com",
+            databaseURL: "https://project1-6dfc7-default-rtdb.firebaseio.com",
+            projectId: "project1-6dfc7",
+            storageBucket: "project1-6dfc7.appspot.com",
+            messagingSenderId: "1086482242380",
+            appId: "1:1086482242380:web:7ef4b2d6b3c2a886fc8de9",
+            measurementId: "G-FQY04VY3MQ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+    <!--DOM 시작-->
+    <header>
+        <div class="head"> 
+            <h1 class="title">
+                MCA PAY
+                </h1> 
+        </div>
+    </header>
+    <div class="Card">
+        <h2 class="QR">
+            Table 1
+        </h2>
+        <h3 class="scansubsub">
+            주문 목록이 맞는지 확인해주세요!
+        </h3>
+        <h4  id="New11" ></h4>
+  
+        <h4  id="New12"></h4>
+
+        <h4  id="New13"></h4>
+
+
+
+        <h4  id="New21"></h4>
+
+        <h4  id="New22"></h4>
+
+        <h4  id="New23"></h4>
+
+
+
+        <h4  id="New31"></h4>
+
+        <h4  id="New32"></h4>
+
+
+        <h4  id="New33"></h4>
+
+
+ 
+        <h4  id="New41"></h4>
+
+ 
+        <h4  id="New42"></h4>
+
+
+        <h4  id="New43"></h4>
+
+
+  
+        <h4  id="New51"></h4>
+ 
+  
+        <h4  id="New52"></h4>
+ 
+        <h4  id="New53"></h4>
+
+
+  
+        <h4  id="New61"></h4>
+
+  
+        <h4  id="New62"></h4>
+
+        <h4  id="New63"></h4>
+
+
+
+        <h4  id="New71"></h4>
+ 
+        <h4  id="New72"></h4>
+
+
+        <h4  id="New73"></h4>
+
+
+  
+        <h4  id="New81"></h4>
+   
+        <h4  id="New82"></h4>
+   
+
+        <h4  id="New83"></h4>
+
+
+
+        <h4  id="New91"></h4>
+  
+ 
+        <h4  id="New92"></h4>
+ 
+  
+        <h4  id="New93"></h4>
+
+
+
+        <h4  id="New101"></h4>
+ 
+ 
+        <h4  id="New102"></h4>
+  
+  
+        <h4  id="New103"></h4>
+
+
+
+        <h4  id="New111"></h4>
+ 
+ 
+        <h4  id="New112"></h4>
+ 
+
+        <h4  id="New113"></h4>
+   
+
+   
+        <h4  id="New121"></h4>
+    
+  
+        <h4  id="New122"></h4>
+ 
+
+        <h4  id="New123"></h4>
+  
+
+
+        <h4  id="New131"></h4>
+  
+  
+        <h4  id="New132"></h4>
+  
+   
+        <h4  id="New133"></h4>
+ 
+
+  
+        <h4  id="New141"></h4>
+
+        <h4  id="New142"></h4>
+
+        <h4  id="New143"></h4>
+  
+
+
+        <h4  id="New151"></h4>
+
+
+        <h4  id="New152"></h4>
+
+
+        <h4  id="New153"></h4>
+
+
+   
+        <h4  id="New161"></h4>
+   
+   
+        <h4  id="New162"></h4>
+
+   
+        <h4  id="New163"></h4>
+ 
+
+    
+        <h4  id="New171"></h4>
+  
+
+        <h4  id="New172"></h4>
+
+  
+        <h4  id="New173"></h4>
+  
+
+  
+        <h4  id="New181"></h4>
+  
+  
+        <h4  id="New182"></h4>
+  
+  
+        <h4  id="New183"></h4>
+  
+
+
+        <h4  id="New191"></h4>
+
+
+        <h4  id="New192"></h4>
+
+        <h4  id="New193"></h4>
+
+
+  
+        <h4  id="New201"></h4>
+  
+   
+        <h4  id="New202"></h4>
+    
+    
+        <h4  id="New203"></h4>
+  
+
+ 
+        <h4  id="New211"></h4>
+
+ 
+        <h4  id="New212"></h4>
+
+  
+        <h4  id="New213"></h4>
+
+
+  
+        <h4  id="New221"></h4>
+
+
+        <h4  id="New222"></h4>
+
+        <h4  id="New223"></h4>
+ 
+
+
+        <h4  id="New231"></h4>
+
+
+        <h4  id="New232"></h4>
+  
+        <h4  id="New233"></h4>
+
+
+
+        <h4  id="New241"></h4>
+
+
+        <h4  id="New242"></h4>
+
+ 
+        <h4  id="New243"></h4>
+  
+
+  
+        <h4  id="New141"></h4>
+ 
+
+        <h4  id="New142"></h4>
+
+   
+        <h4  id="New143"></h4>
+ 
+        <div class="New" ></div>
+        <div style="margin-top: 50px; width: fit-content; height: 10px; align-items: flex-end;">
+            <input type="button" class="buttonn" onclick="location.href='test.html'" value="결제하기" >
+            </input>
+        </div>
+    </div>
+    <!--DOM 끝-->
+    <script class="pasta 1">
+        //파이어베이스 데이터 불러오기 함수
+        function receive_data(num, contents,New_name,text){
+        firebase.database().ref('table/'+num+'/'+contents).on('value',(pasta)=>{
+            var Value = JSON.stringify(pasta.val());
+                if(Value==="null"){}
+                else{
+                    document.getElementById(New_name).innerHTML=text+"\u00a0\u00a0"+Value;
+                }
+         });
+        }
+        //데이터 3개를 동시에 부르는 함수
+        function receive_menu(num,New_name){
+                    receive_data(num,"meatMenu",New_name+"1","이름");
+                    receive_data(num,"meatNumber",New_name+"2","수량");
+                    receive_data(num,"meatValue",New_name+"3","가격");
+    
+            }
+    
+            for(var count = 1; count<28; count++)
+            {
+                receive_menu(count,"New"+count)
+            }
+
+
+        
+        
+
+    </script>
+    </body>
+</html>

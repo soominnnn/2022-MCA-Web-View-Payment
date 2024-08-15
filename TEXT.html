@@ -298,16 +298,15 @@
         }
         //데이터 3개를 동시에 부르는 함수
         function receive_menu(num,New_name){
-                    receive_data(num,"meatMenu",New_name+"1","이름");
-                    receive_data(num,"meatNumber",New_name+"2","수량");
-                    receive_data(num,"meatValue",New_name+"3","가격");
+            receive_data(num,"meatMenu",New_name+"1","이름");
+            receive_data(num,"meatNumber",New_name+"2","수량");
+            receive_data(num,"meatValue",New_name+"3","가격");
+        }
     
-            }
-    
-            for(var count = 1; count<28; count++)
-            {
-                receive_menu(count,"New"+count)
-            }
+        for(let count = 1; count < 28; count++)
+        {
+            receive_menu(count,"New"+count)
+        }
 
 
         
